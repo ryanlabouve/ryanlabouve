@@ -1,14 +1,15 @@
 'use strict';
 var gulp = require('gulp');
 var run = require('gulp-run');
-// var webserver = require('gulp-webserver');
 var chalk = require('chalk');
+var fs = require("fs");
 
 // CSS Junk
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
-
 var browserSync = require('browser-sync').create();
+var atImport = require("postcss-import");
+var css = fs.readFileSync("css/app.css", "utf8");
 
 // Static server
 gulp.task('serve', function() {
@@ -30,6 +31,7 @@ gulp.task('metalsmith', function() {
 // SCSS
 gulp.task('css', function() {
   var processors = [
+    atImport(),
     autoprefixer({browsers: ['last 1 version']}),
     require('postcss-nested'),
     require('postcss-simple-vars'),

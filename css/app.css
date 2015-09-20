@@ -1,5 +1,14 @@
-$blue: #676767;
+@import 'basscss/css/basscss.css';
+
+$dark: #463F3F;
+$neutral: #ccc;
+$light: #fff;
 
 body {
-  background: $blue;
+  background: $neutral;
+}
+
+.header {
+  background: $dark;
+  color: $light;
 }
