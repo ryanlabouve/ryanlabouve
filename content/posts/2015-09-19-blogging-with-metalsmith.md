@@ -1,3 +1,8 @@
+---
+title: "Blogging with Metalsmith"
+collection: "articles"
+date: "2015-09-19"
+---
 During the interview for my last job, I was asked what my blogging platform was.
 
 It was wordpress.

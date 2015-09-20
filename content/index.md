@@ -1,3 +1,7 @@
+---
+layout: list.html
+---
+
 # Bloop
 
 asdfasdf
