@@ -1,0 +1,19 @@
+{
+  "name": "ryanlabouve",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Ryan LaBouve <imryanlabouve@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "basscss": "~7.0.4"
+  }
+}
