@@ -24,7 +24,7 @@ gulp.task('serve', function() {
 gulp.task('metalsmith', function() {
   // this runs metalsmith
   return run('npm start').exec('', function() {
-    return gulp.start('css');
+    return gulp.start('css', 'icons');
   });
 });
 
@@ -44,6 +44,11 @@ gulp.task('css', function() {
           .pipe(browserSync.stream());
 });
 
+gulp.task('icons', function() {
+  return gulp.src('bower_components/typicons.font/src/font/typicons.*')
+          .pipe(gulp.dest('./dist/css'));
+});
+
 
 // Post
 gulp.task('watch', function() {
@@ -53,7 +58,7 @@ gulp.task('watch', function() {
     'partials/*',
     'index.js'
     ],
-    ['metalsmith', 'css']);
+    ['metalsmith', 'css', 'icons']);
   gulp.watch('css/**/*', ['css']);
   gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
@@ -67,4 +72,4 @@ gulp.task('watch', function() {
 //     }));
 // });
 
-gulp.task('default', ['serve', 'watch','metalsmith', 'css'])
+gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'icons'])

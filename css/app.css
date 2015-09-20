@@ -1,4 +1,5 @@
 @import 'basscss/css/basscss.css';
+@import 'typicons.font/src/font/typicons.css';
 
 $dark: #463F3F;
 $neutral: #ccc;
