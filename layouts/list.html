@@ -14,23 +14,24 @@
   </div>
 
 
-  List o posts:
-  {{collections|json}}
+  <div class="container">
+    <div class="box">
+      {% for article in collections.articles %}
+        <div class="post-li">
+          <a href="{{article.link}}">
+            <!-- {{console.log(article)}} -->
+            <div class="right">{{article.date}}</div>
+            <h2>{{article.title}}</h2>
+            <p>
+              {{article.peak}}
+            </p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 
-
-  <br>
-  end list
-<div class="container clearfix">
-  <div class="sm-col sm-col-4">
-    bio
-  </div>
-  <div class="sm-col sm-col-4">
-    Articles
-  </div>
-  <div class="sm-col sm-col-4">
-    Rss
-  </div>
-</div>
+  {% include "../partials/footer.html" %}
 
 </body>
 </html>

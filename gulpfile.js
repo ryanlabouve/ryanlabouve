@@ -47,8 +47,13 @@ gulp.task('css', function() {
 
 // Post
 gulp.task('watch', function() {
-  gulp.watch('content/**/*', ['metalsmith', 'css']);
-  gulp.watch('layouts/**/*', ['metalsmith', 'css']);
+  gulp.watch([
+    'content/**/*',
+    'layouts/**/*',
+    'partials/*',
+    'index.js'
+    ],
+    ['metalsmith', 'css']);
   gulp.watch('css/**/*', ['css']);
   gulp.watch("dist/*.html").on('change', browserSync.reload);
 });

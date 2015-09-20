@@ -1,7 +1,9 @@
 ---
 title: "Blogging with Metalsmith"
 collection: "articles"
-date: "2015-09-19"
+peak: Death to wordpress. Long live metalsmith!
+date: "2015-09-29"
+link: blogging-with-metalsmith
 ---
 During the interview for my last job, I was asked what my blogging platform was.
 

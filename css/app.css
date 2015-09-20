@@ -12,3 +12,8 @@ body {
   background: $dark;
   color: $light;
 }
+
+
+.box {
+  background: $light;
+}

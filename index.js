@@ -16,6 +16,9 @@ Metalsmith(__dirname)
 
   .use(markdown())
 
+  .use(permalinks({
+    pattern: ':title'
+  }))
 
   // .use(function(files, metalsmith, done) {
   //   console.log('FIles: ');
@@ -33,10 +36,6 @@ Metalsmith(__dirname)
   .use(inPlace({
     "engine": "swig",
     "partials": "partials"
-  }))
-
-  .use(permalinks({
-    "pattern": ":title"
   }))
 
   .build(function(err) {

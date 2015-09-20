@@ -1,5 +1,5 @@
 ---
-title: "Teach me how to dougie"
+title: "About"
 draft: false
 template: default.html
 ---

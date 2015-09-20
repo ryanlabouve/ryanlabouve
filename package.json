@@ -21,6 +21,7 @@
     "gulp-webserver": "^0.9.1",
     "gulpsmith": "^0.5.5",
     "handlebars": "^4.0.2",
+    "lodash": "^3.10.1",
     "metalsmith": "^2.0.1",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
