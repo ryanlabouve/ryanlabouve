@@ -1,3 +1,5 @@
+$blue: #676767;
+
 body {
-  background: red;
+  background: $blue;
 }
