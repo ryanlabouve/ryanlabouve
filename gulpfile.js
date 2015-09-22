@@ -26,7 +26,7 @@ gulp.task('serve', function() {
 // Metalsmith
 gulp.task('metalsmith', function() {
   // this runs metalsmith
-  return run('npm start').exec('', function() {
+  return run('node --harmony_generators ./index.js').exec('', function() {
     return gulp.start('css', 'copyBowerComponents');
   });
 });
