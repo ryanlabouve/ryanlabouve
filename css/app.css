@@ -25,6 +25,10 @@
 @import 'basscss-colors';
 @import 'basscss-background-colors';
 
+
+/* Extra imports */
+@import 'basscss-responsive-white-space';
+
 /* Default custom properties */
 @import 'basscss-defaults';
 
@@ -118,6 +122,12 @@ body {
   font-family: var(--font-family-serif);
 }
 
+.sep {
+  content: '';
+  height: 1px;
+  background: color(var(--neutral) tint(50%));
+}
+
 .header__title {
   display: inline-block;
   height: var(--space-3);
@@ -125,6 +135,21 @@ body {
   color: white;
   letter-spacing: 2px;
 }
+
+.post-li {
+  a {
+    text-decoration: none;
+  }
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-neutral {
+  color: var(--neutral);
+}
+
 .header {
   background: var(--dark);
   color: var(--light);
