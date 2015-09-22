@@ -113,10 +113,12 @@ body {
 .header {
   background: var(--dark);
   color: var(--light);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 
 .box {
   background: var(--light);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
