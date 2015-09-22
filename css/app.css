@@ -123,6 +123,12 @@
 */
 
 :root {
+  --primary: #B51414;
+  --link-color: var(--primary);
+  --button-background-color: var(--primary);
+}
+
+:root {
   --dark: #463F3F;
   --neutral: #ccc;
   --light: #fff;
