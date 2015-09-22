@@ -11,42 +11,50 @@ var browserSync = require('browser-sync').create();
 var atImport = require("postcss-import");
 var css = fs.readFileSync("css/app.css", "utf8");
 
+var cssnext = require("gulp-cssnext")
+
 // Static server
 gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./dist"
-        }
-    });
+  browserSync.init({
+      server: {
+          baseDir: "./dist"
+      }
+  });
 });
 
 // Metalsmith
 gulp.task('metalsmith', function() {
   // this runs metalsmith
   return run('npm start').exec('', function() {
-    return gulp.start('css', 'icons');
+    return gulp.start('css', 'copyBowerComponents');
   });
 });
 
 // SCSS
 gulp.task('css', function() {
-  var processors = [
-    atImport(),
-    autoprefixer({browsers: ['last 1 version']}),
-    require('postcss-nested'),
-    require('postcss-simple-vars'),
-    require('postcss-mixins')
-  ];
+  // var processors = [
+  //   atImport(),
+  //   autoprefixer({browsers: ['last 1 version']}),
+  //   require('postcss-nested'),
+  //   require('postcss-simple-vars'),
+  //   require('postcss-mixins')
+  // ];
 
-  return gulp.src('css/**/*.css')
-          .pipe(postcss(processors))
-          .pipe(gulp.dest('./dist/css'))
-          .pipe(browserSync.stream());
+  // return gulp.src('css/**/*.css')
+  //         .pipe(postcss(processors))
+  //         .pipe(gulp.dest('./dist/css'))
+  //         .pipe(browserSync.stream());
+  return gulp.src("css/app.css")
+    .pipe(cssnext({
+      compress: true
+    }))
+    .pipe(gulp.dest("./dist/css"))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('icons', function() {
-  return gulp.src('bower_components/typicons.font/src/font/typicons.*')
-          .pipe(gulp.dest('./dist/css'));
+gulp.task('copyBowerComponents', function() {
+  return gulp.src('bower_components/**/*')
+          .pipe(gulp.dest('./dist/bower_components'));
 });
 
 
@@ -58,7 +66,7 @@ gulp.task('watch', function() {
     'partials/*',
     'index.js'
     ],
-    ['metalsmith', 'css', 'icons']);
+    ['metalsmith', 'css', 'copyBowerComponents']);
   gulp.watch('css/**/*', ['css']);
   gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
@@ -72,4 +80,4 @@ gulp.task('watch', function() {
 //     }));
 // });
 
-gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'icons'])
+gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'copyBowerComponents'])
