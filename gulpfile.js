@@ -1,6 +1,5 @@
 'use strict';
 var gulp = require('gulp');
-var run = require('gulp-run');
 var chalk = require('chalk');
 var fs = require('fs');
 var exec = require('child_process').exec;
@@ -23,7 +22,7 @@ gulp.task('serve', function() {
 
 gulp.task('metalsmith', function() {
   // must run metalsmith with es6 flags
-  return run('node --harmony_generators ./index.js').exec('', function() {
+  exec("node --harmony_generators ./index.js", function() {
     return gulp.start('css', 'copyBowerComponents');
   });
 });

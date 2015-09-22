@@ -1,7 +1,6 @@
 var Metalsmith = require('metalsmith');
 
 var markdown   = require('metalsmith-markdown');
-var prism = require('metalsmith-prism');
 
 var layouts = require('metalsmith-layouts');
 var permalinks = require('metalsmith-permalinks');
@@ -25,10 +24,8 @@ Metalsmith(__dirname)
     langPrefix: 'language-'
   }))
 
-  // .use(prism())
-
   .use(permalinks({
-    pattern: ':title'
+    pattern: ':link'
   }))
 
   // .use(function(files, metalsmith, done) {

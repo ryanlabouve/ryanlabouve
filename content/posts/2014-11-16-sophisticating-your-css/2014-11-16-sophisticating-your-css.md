@@ -3,7 +3,7 @@ title: "Sophisticating Your CSS"
 collection: "posts"
 peak: CSS is our way to style the web CSS is easy to write, but hard to write well…
 date: "2014-11-16"
-link: sophisticating-your-css
+link: "sophisticating-your-css"
 ---
 
 *   CSS is our way to style the web
