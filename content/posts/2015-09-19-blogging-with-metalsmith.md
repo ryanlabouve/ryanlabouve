@@ -14,10 +14,17 @@ I joked for this not to be held against me. Time to change anyways.
 
 Goalzzz:
 
-* Simple (not to be confused with easy)
-* Static Site
+* Easy to Author
+* Easy to Deploy
 * Version Controlled
+* Simple (not to be confused with easy)
+
+Bonuses:
+
+* Easy asset management
+* Static Site
 * Unnecessarily Configurable
+* Unnecessarily Bleeding Edge tech
 
 And to make some things _simpler_, I wanted it to be a seamless transition of
 my current site to a new one.
