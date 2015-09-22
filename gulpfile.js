@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var run = require('gulp-run');
 var chalk = require('chalk');
 var fs = require("fs");
+var exec = require('child_process').exec;
 
 // CSS Junk
 var postcss = require('gulp-postcss');
@@ -53,8 +54,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('copyBowerComponents', function() {
-  return gulp.src('bower_components/**/*')
-          .pipe(gulp.dest('./dist/bower_components'));
+  return exec("cp -a bower_components ./dist");
 });
 
 

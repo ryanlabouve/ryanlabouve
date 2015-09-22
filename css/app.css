@@ -25,41 +25,13 @@
 @import 'basscss-colors';
 @import 'basscss-background-colors';
 
-
-/* Optional Modules (not included in Basscss by default) */
-/*
-@import 'basscss-btn-sizes';
-@import 'basscss-color-forms-dark';
-@import 'basscss-input-range';
-@import 'basscss-progress';
-@import 'basscss-background-images';
-@import 'basscss-media-object';
-@import 'basscss-responsive-white-space';
-@import 'basscss-utility-headings';
-@import 'basscss-ui-utility-groups';
-@import 'basscss-table-object';
-@import 'basscss-highlight-dark';
-@import 'basscss-highlight';
-*/
-
-
-/* Example custom file import */
-/*
-@import './color/borders';
-*/
-
-
 /* Default custom properties */
 @import 'basscss-defaults';
 
-
-/* Custom media queries */
 /*
-@custom-media --breakpoint-sm (min-width: 40em);
-@custom-media --breakpoint-md (min-width: 52em);
-@custom-media --breakpoint-lg (min-width: 64em);
+  For reference:
+  https://github.com/basscss/bassplate/blob/master/src/base.css
 */
-
 
 /* Custom properties */
 /*
