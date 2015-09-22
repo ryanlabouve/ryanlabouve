@@ -4,7 +4,7 @@
   "description": "Ryan LaBouve Blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ryan LaBouve",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "gulp": "^3.9.0",
     "gulp-bower-src": "^0.1.0",
     "gulp-cssnext": "^1.0.1",
+    "gulp-postcss": "^6.0.0",
     "metalsmith": "^2.0.1",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
@@ -23,6 +24,7 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-templates": "^0.7.0",
+    "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^1.0.1",
     "swig": "^1.4.2"
   },

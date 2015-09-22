@@ -2,15 +2,15 @@
 var gulp = require('gulp');
 var run = require('gulp-run');
 var chalk = require('chalk');
-var fs = require("fs");
+var fs = require('fs');
 var exec = require('child_process').exec;
 
-var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
-var css = fs.readFileSync("css/app.css", "utf8");
+var css = fs.readFileSync('css/app.css', 'utf8');
 
-var cssnext = require("gulp-cssnext")
+var cssnext = require('gulp-cssnext');
+var postcss = require('gulp-postcss');
 
 // Static server
 gulp.task('serve', function() {
@@ -30,6 +30,7 @@ gulp.task('metalsmith', function() {
 
 gulp.task('css', function() {
   return gulp.src("css/app.css")
+    .pipe(postcss([require('postcss-nested')]))
     .pipe(cssnext({
       compress: true
     }))
