@@ -16,16 +16,16 @@
 
   <div class="container">
     <div class="box p4">
-      {% for article in collections.articles %}
+      {% for post in collections.posts %}
         <div class="post-li">
-          <a href="{{article.link}}">
-            <!-- {{console.log(article)}} -->
-            <div class="right">{{article.date|date('F j, Y')}}</div>
-            <h2>{{article.title}}</h2>
+          <a href="{{post.link}}">
+            <!-- {{console.log(post)}} -->
+            <div class="right">{{post.date|date('F j, Y')}}</div>
+            <h2>{{post.title}}</h2>
             <p>
-              {{article.peak}}
+              {{post.peak}}
             </p>
-            <a class="btn btn-primary" href="{{article.link}}">Read More</a>
+            <a class="btn btn-primary" href="{{post.link}}">Read More</a>
           </a>
         </div>
       {% endfor %}

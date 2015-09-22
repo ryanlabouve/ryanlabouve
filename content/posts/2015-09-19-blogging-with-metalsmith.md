@@ -1,6 +1,6 @@
 ---
 title: "Blogging with Metalsmith"
-collection: "articles"
+collection: "posts"
 peak: Death to wordpress. Long live metalsmith!
 date: "2015-09-29"
 link: blogging-with-metalsmith

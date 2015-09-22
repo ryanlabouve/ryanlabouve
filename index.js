@@ -12,7 +12,12 @@ Metalsmith(__dirname)
   .source('./content')
   .destination('./dist')
 
-  .use(collections())
+  .use(collections({
+    posts: {
+      sortBy: 'date',
+      reverse: true
+    }
+  }))
 
   .use(markdown())
 
