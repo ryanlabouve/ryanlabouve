@@ -12,35 +12,38 @@
      <div class="sm-col sm-col-4 px1">
       <div class="box p2">
         {% for post in collections.posts|truncate_list(5) %}
-          <div>
-            {{post.title|limit(100)}}
+          <div class="bar">
+            <a href="{{post.link}}">
+
+              {{post.title|mahlimit(25)}} <div class="muted right">{{post.date|date('m-d-y')}}</div>
+            </a>
           </div>
         {% endfor %}
       </div>
     </div>
      <div class="sm-col sm-col-4 px1">
       <div class="box">
-        <div class="brand-rss">
+        <div class="brand-rss bar clearfix">
           <a href="http://twitter.com/ryanlabouve" class="btn btn-icon">
             <span class="typcn typcn-rss"></span> RSS
           </a>
         </div>
-        <div class="brand-twitter">
+        <div class="brand-twitter bar clearfix">
           <a href="http://twitter.com/ryanlabouve" class="btn btn-icon">
             <span class="typcn typcn-social-twitter"></span> Twitter
           </a>
         </div>
-        <div class="brand-linkedin">
+        <div class="brand-linkedin bar clearfix">
           <a href="https://www.linkedin.com/in/ryanlabouve" class="btn btn-icon">
             <span class="typcn typcn-social-linkedin"></span> LinkedIn
           </a>
         </div>
-        <div class="brand-github">
+        <div class="brand-github bar clearfix">
           <a href="http://github.com/ryanlabouve/" class="btn btn-icon">
             <span class="typcn typcn-social-github"></span> Github
           </a>
         </div>
-        <div class="brand-dribbble">
+        <div class="brand-dribbble bar clearfix">
           <a href="http://dribbble.com/ryanlabouve/" class="btn btn-icon">
             <span class="typcn typcn-social-dribbble"></span> Dribbble
           </a>

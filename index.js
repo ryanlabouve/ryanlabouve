@@ -63,6 +63,11 @@ Metalsmith(__dirname)
       // {{ title|exclamation }}
       "exclamation": function(content) {
         return content + "!"
+      },
+
+      //Dumb and strong limit
+      "mahlimit": function(x, y) {
+        return x.slice(0,y) + '...';
       }
     }
   }))

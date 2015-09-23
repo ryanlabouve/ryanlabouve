@@ -207,29 +207,60 @@ body {
   margin-right: auto;
 }
 
-
+:root {
+  --brand-dribbble: #ea4c89;
+  --brand-twitter: #55acee;
+  --brand-github: #333333;
+  --brand-linkedin: rgb(0, 119, 181);
+  --brand-rss: rgb(199, 181, 114);
+}
 .brand-dribbble {
-  background: #ea4c89;
+  background: var(--brand-dribbble);
   color: white;
+  border-bottom:1px solid color(var(--brand-dribbble) shade(10%));
+  &:hover{
+    background: color(var(--brand-dribbble) shade(20%));
+  }
 }
 
 .brand-twitter {
-  background: #55acee;
+  background: var(--brand-twitter);
   color: white;
+  border-bottom:1px solid color(var(--brand-twitter) shade(10%));
+  &:hover{
+    background: color(var(--brand-twitter) shade(20%));
+  }
 }
 
 .brand-github {
-  background: #333333;
+  background: var(--brand-github);
   color: white;
+  border-bottom:1px solid color(var(--brand-github) shade(10%));
+  &:hover{
+    background: color(var(--brand-github) shade(20%));
+  }
 }
 
 .brand-linkedin {
-  background: #0077b5;
+  background: var(--brand-linkedin);
   color: white;
+  border-bottom:1px solid color(var(--brand-linkedin) shade(10%));
+  &:hover{
+    background: color(var(--brand-linkedin) shade(20%));
+  }
 }
 
 
 .brand-rss {
   background: #c7b572;
   color: white;
+  border-bottom:1px solid color(var(--brand-rss) shade(10%));
+  &:hover{
+    background: color(#c7b572 shade(20%));
+  }
+}
+
+.bar {
+  line-height: 3;
+  cursor: pointer;
 }
