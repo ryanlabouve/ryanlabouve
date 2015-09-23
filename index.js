@@ -10,6 +10,12 @@ var collections = require('metalsmith-collections');
 
 var ignore = require('metalsmith-ignore');
 
+var swigHelpers = require('metalsmith-swig-helpers')
+
+var swig = require('swig');
+
+var _ = require('lodash');
+
 Metalsmith(__dirname)
 
   .source('./content')
@@ -46,6 +52,20 @@ Metalsmith(__dirname)
   //   // console.log('Metalsmith: ');
   //   // console.log(metalsmith);
   // })
+  .use(swigHelpers({
+    filters: {
+      "truncate_list": function(x, y)  {
+
+        return x.slice(0,y);
+      },
+
+      // Append a ! at the end of the given content.
+      // {{ title|exclamation }}
+      "exclamation": function(content) {
+        return content + "!"
+      }
+    }
+  }))
 
   .use(layouts({
     "default": "default.html",

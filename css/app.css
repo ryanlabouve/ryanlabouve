@@ -194,3 +194,42 @@ body {
   height: 200px;
   border-radius: 50%;
 }
+
+.profile-pic-sm {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.brand-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.brand-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.brand-github {
+  background: #333333;
+  color: white;
+}
+
+.brand-linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+
+.brand-rss {
+  background: #c7b572;
+  color: white;
+}

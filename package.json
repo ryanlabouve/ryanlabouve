@@ -16,6 +16,7 @@
     "gulp-bower-src": "^0.1.0",
     "gulp-cssnext": "^1.0.1",
     "gulp-postcss": "^6.0.0",
+    "lodash": "^3.10.1",
     "metalsmith": "^2.0.1",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
@@ -24,6 +25,7 @@
     "metalsmith-layouts": "^1.4.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-swig-helpers": "git://github.com/madeofpeople/metalsmith-swig-helpers.git",
     "metalsmith-templates": "^0.7.0",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^1.0.1",
@@ -65,6 +67,8 @@
     "basscss-utility-layout": "latest",
     "basscss-utility-typography": "latest",
     "basscss-white-space": "latest",
-    "flex-object": "latest"
+    "flex-object": "latest",
+    "metalsmith-swig-helpers": "git://github.com/madeofpeople/metalsmith-swig-helpers.git",
+    "swig": "^1.4.2"
   }
 }
