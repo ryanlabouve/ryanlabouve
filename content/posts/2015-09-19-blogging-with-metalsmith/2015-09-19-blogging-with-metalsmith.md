@@ -20,7 +20,13 @@ Goalzzz:
 * Simple (not to be confused with easy)
 
 Bonuses:
-
+---
+title: "Gulp for CSS: Getting Sophisticated"
+collection: "posts"
+peak: Different development and production stylesheets Development: easy to debug Production: minified Start automating repetitive tasks I recently evangelized…
+date: "2014-11-27"
+link: "gulp-for-css-pt2"
+---
 * Easy asset management
 * Static Site
 * Unnecessarily Configurable

@@ -8,10 +8,18 @@ var inPlace = require('metalsmith-in-place');
 
 var collections = require('metalsmith-collections');
 
+var ignore = require('metalsmith-ignore');
+
 Metalsmith(__dirname)
 
   .source('./content')
   .destination('./dist')
+
+  .use(ignore([
+    '.DS_Store',
+    '*/.DS_Store',
+    '*/*/.DS_Store'
+  ]))
 
   .use(collections({
     posts: {
@@ -20,20 +28,23 @@ Metalsmith(__dirname)
     }
   }))
 
-  .use(markdown({
-    langPrefix: 'language-'
-  }))
+  .use(markdown())
 
   .use(permalinks({
-    pattern: ':link'
+    pattern: ':link',
+    relative: false
   }))
 
+
   // .use(function(files, metalsmith, done) {
-  //   console.log('FIles: ');
-  //   console.log(files);
-  //   console.log();
-  //   console.log('Metalsmith: ');
-  //   console.log(metalsmith);
+  //   // console.log('fIles: ');
+  //   // console.log(files);
+  //   Object.keys(files).forEach(function(file){
+  //     console.log(file);
+  //   });
+  //   console.log('\n\n\n');
+  //   // console.log('Metalsmith: ');
+  //   // console.log(metalsmith);
   // })
 
   .use(layouts({

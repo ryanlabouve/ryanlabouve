@@ -11,6 +11,8 @@ var css = fs.readFileSync('css/app.css', 'utf8');
 var cssnext = require('gulp-cssnext');
 var postcss = require('gulp-postcss');
 
+
+var metallog = chalk.white.bgRed.bold;
 // Static server
 gulp.task('serve', function() {
   browserSync.init({
@@ -22,8 +24,12 @@ gulp.task('serve', function() {
 
 gulp.task('metalsmith', function() {
   // must run metalsmith with es6 flags
-  exec("node --harmony_generators ./index.js", function() {
-    return gulp.start('css', 'copyBowerComponents');
+  console.log(metallog('Enter the Metalsmith'));
+  exec("node --harmony_generators ./index.js", function(err, stdout, stderr) {
+    console.log(chalk.white.bgRed.bold(stdout));
+    console.log(chalk.white.bgRed.bold(stderr));
+    console.log(chalk.white.bgRed.bold('Leaving the Metalsmith'));
+    gulp.start('css', 'copyBowerComponents');
   });
 });
 

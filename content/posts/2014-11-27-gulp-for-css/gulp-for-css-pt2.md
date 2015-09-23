@@ -1,9 +1,9 @@
 ---
 title: "Gulp for CSS: Getting Sophisticated"
 collection: "posts"
-peak: Different development and production stylesheets Development: easy to debug Production: minified Start automating repetitive tasks I recently evangelized…
+link: gulp-for-css-pt2
+peak: "Different development and production stylesheets Development: easy to debug Production: minified Start automating repetitive tasks I recently evangelized…"
 date: "2014-11-27"
-link: "gulp-for-css-pt2"
 ---
 
 *   Different development and production stylesheets
@@ -21,11 +21,13 @@ Here’s where we left off last time: [Code Checkpoint](https://github.com/ryanl
 
 Make an independent `build` task.
 
+```
     // gulpfile.js
     // requires...
     // tasks...
     gulp.task('build', ['sass']);
     gulp.task('default', ['sass', 'watch', 'connect']);
+```
 
 Our default task will continue to take advantage of LiveReload and Watch for development. The `build` task will allow us to reuse certain tasks and include different production-specific tasks.
 

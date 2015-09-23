@@ -20,7 +20,6 @@
       {% for post in collections.posts %}
         <div class="post-li lg-px4">
           <a href="{{post.link}}" class="clearfix">
-            <!-- {{console.log(post)}} -->
             <div class="right">{{post.date|date('F j, Y')}}</div>
             <h2 class="serif h1 text-dark">{{post.title}}</h2>
             <p class="text-neutral">

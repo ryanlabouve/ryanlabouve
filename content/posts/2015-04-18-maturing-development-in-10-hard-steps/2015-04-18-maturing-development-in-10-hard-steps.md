@@ -5,8 +5,6 @@ peak: 3 months ago I joined RaiseMore, an OKC startup. This was coming from a jo
 date: "2015-04-18"
 link: "maturing-development-in-10-abysmally-hard-but-amazing-steps"
 ---
-<div class="entry__content">
-
 3 months ago I joined [RaiseMore](http://raisemore.com), an OKC startup. This was coming from a job as a web developer for a large university… let’s just say the change in pace was noticeable.
 
 ![title](http://ryanlabouve.com/wp-content/uploads/2015/04/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
@@ -127,5 +125,3 @@ Doing thinks the dumb way is ok as long as nobody dies, nobody is getting fired,
 ![Commit Chart](http://ryanlabouve.com/wp-content/uploads/2015/04/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
 
 If you are a junior developer and have any questions about this feel free to reach out. Or if you are a senior developer and think I’ve missed something important please feel free to make fun of me on the internet. ![:)](http://ryanlabouve.com/wp-includes/images/smilies/simple-smile.png)
-
-</div>

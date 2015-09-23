@@ -1,9 +1,9 @@
 ---
 title: "Ember Problems: Connecting to Rails-API"
+date: 2015-01-29
+link: ember-problems-connecting-rails-api
 collection: "posts"
-peak: Problem 1: you want to connect Ember-CLI to an actual API Welcome to part 1 of my 10…
-date: "2015-01-29"
-link: "ember-problems-connecting-rails-api"
+peak: "Problem 1: you want to connect Ember-CLI to an actual API Welcome to part 1 of my 10…"
 ---
 
 > Problem 1: you want to connect Ember-CLI to an actual API
