@@ -15,7 +15,10 @@
   <div class="container">
     <div class="box py4 px2 sm-px4">
       <div class="post lg-px4">
+        <div class="right">{{date|date('F j, Y')}}</div>
+        <h1 class="serif">{{title}}</h1>
         {{ contents|safe }}
+
       </div>
     </div>
   </div>

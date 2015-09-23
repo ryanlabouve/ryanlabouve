@@ -3,7 +3,7 @@ title: "Gulp for CSS: Getting Sophisticated"
 collection: "posts"
 link: gulp-for-css-pt2
 peak: "Different development and production stylesheets Development: easy to debug Production: minified Start automating repetitive tasks I recently evangelized…"
-date: "2014-11-27"
+date: 2014-11-27
 ---
 
 *   Different development and production stylesheets

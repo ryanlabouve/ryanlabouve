@@ -81,7 +81,7 @@ If we run `gulp` in our terminal we will see “Runing gulp!”.
 
 [ryanlabouve/gulp-for-css, v0.2](https://github.com/ryanlabouve/gulp-for-css/releases/tag/v0.2)
 
-![Gulp Running with message "Running Gulp"](http://ryanlabouve.com/wp-content/uploads/2014/11/gulp-initial-run.png)
+![Gulp Running with message "Running Gulp"](../posts/2014-11-24-gulp-for-css-pt1/gulp-initial-run.png)
 
 ## Server
 

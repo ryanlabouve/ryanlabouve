@@ -60,10 +60,10 @@ Our goal here is collect potential narratives of how the app/website/project sho
 Some possible techniques:
 
 *   Flowcharts Showing [Critical Path](http://robots.thoughtbot.com/design-spiking#httpimagesthoughtbotcomdesignspikingsketchpathpng), [Process](http://robots.thoughtbot.com/project-retro-reserve-a-game#WtdTds-indicator), etc.  
-    ![Critical Path Example of Add Word Feature](http://ryanlabouve.com/wp-content/uploads/2014/12/add-word-critical-path-annotated.jpg)
-*   [UI Flow Shorthand](https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows)![UI Flow Example](http://ryanlabouve.com/wp-content/uploads/2014/12/ui-flow.jpg)
+    ![Critical Path Example of Add Word Feature](../posts/2014-12-20-embracing-minimal-design-sprints/add-word-critical-path-annotated.jpg)
+*   [UI Flow Shorthand](https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows)![UI Flow Example](../posts/2014-12-20-embracing-minimal-design-sprints/ui-flow.jpg)
 *   Personas Doodles
-*   [Storyboards](http://robots.thoughtbot.com/the-product-design-sprint#httpimagesthoughtbotcomtheproductdesignsprintstoryboardjpg)![Story Board Example](http://ryanlabouve.com/wp-content/uploads/2014/12/storyboard.jpg)
+*   [Storyboards](http://robots.thoughtbot.com/the-product-design-sprint#httpimagesthoughtbotcomtheproductdesignsprintstoryboardjpg)![Story Board Example](../posts/2014-12-20-embracing-minimal-design-sprints/storyboard.jpg)
 *   [Whatever makes sense to you](http://www.fastcodesign.com/1672917/the-8-steps-to-creating-a-great-storyboard)
 
 It’s important to emphasize that the goal here is for _individuals_ to brainstorm. Not to group brainstorm.

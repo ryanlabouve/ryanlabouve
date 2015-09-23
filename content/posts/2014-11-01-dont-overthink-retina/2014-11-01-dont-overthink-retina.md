@@ -8,7 +8,7 @@ link: "dont-overthink-retina"
 
 With a few simple changes to how we handle our web graphics we can prepare for the retina web.
 
-![Pixel to Retina Art Image](pixel-to-retina.jpg)
+![Pixel to Retina Art Image](../posts/2014-11-01-dont-overthink-retina/pixel-to-retina.jpg)
 
 Retina screen usage surges. New devices have progressively high density displays.
 
@@ -34,7 +34,7 @@ Grizzled web veterans will recall spacer GIFS, rounding corners with images, and
 
 CSS is fast to load, well-supported, scaleable, (often) dynamic, and 99.9% retina ready.
 
-![Css-Examples](Css-Examples.jpg)
+![Css-Examples](../posts/2014-11-01-dont-overthink-retina/Css-Examples.jpg)
 
 #### Some Useful CSS Techniques
 
@@ -51,7 +51,7 @@ Vector based formats (like SVG, Fonts, and Icon Fonts) are resilient. They are 
 
 Vectors are fairly fast to load (although potentially costing your some HTTP requests), scaleable, (potentially) dynamic, and 99.9% retina ready.
 
-![pngvssvg](pngvssvg.png)  
+![pngvssvg](../posts/2014-11-01-dont-overthink-retina/pngvssvg.png)  
 http://upload.wikimedia.org/wikipedia/commons/9/92/Three_logos.svg
 
 #### Useful Resources for Vectors on the Web
@@ -220,6 +220,6 @@ Maybe there are some times when a picture just needs to be weighty, or have diff
 It is possible to throw network speed into the mix and serve up low/mid/high res graphic based on what kind of network connection you have.  Doing this you will have to rely on [an alternate solution](http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/).
 
 Now go forth and retinafy!  
-![LOTR-GIFS-lord-of-the-rings-19103835-480-193](LOTR-GIFS-lord-of-the-rings-19103835-480-193.gif)
+![LOTR-GIFS-lord-of-the-rings-19103835-480-193](../posts/2014-11-01-dont-overthink-retina/LOTR-GIFS-lord-of-the-rings-19103835-480-193.gif)
 
 </div>
