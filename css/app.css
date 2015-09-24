@@ -116,6 +116,7 @@
 
 body {
   background: var(--neutral);
+  padding-bottom: var(--space-4);
 }
 
 .btn:focus {

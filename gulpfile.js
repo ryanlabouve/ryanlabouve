@@ -29,7 +29,7 @@ gulp.task('metalsmith', function() {
     console.log(chalk.white.bgRed.bold(stdout));
     console.log(chalk.white.bgRed.bold(stderr));
     console.log(chalk.white.bgRed.bold('Leaving the Metalsmith'));
-    gulp.start('css', 'copyBowerComponents');
+    gulp.start('css', 'copyBowerComponents', 'copyAssets');
   });
 });
 
@@ -41,6 +41,10 @@ gulp.task('css', function() {
     }))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream());
+});
+
+gulp.task('copyAssets', function() {
+  return exec("cp -a assets ./dist")
 });
 
 gulp.task('copyBowerComponents', function() {
@@ -55,9 +59,9 @@ gulp.task('watch', function() {
     'partials/*',
     'index.js'
     ],
-    ['metalsmith', 'css', 'copyBowerComponents']);
+    ['metalsmith', 'css', 'copyBowerComponents', 'copyAssets']);
   gulp.watch('css/**/*', ['css']);
   gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'copyBowerComponents'])
+gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'copyBowerComponents', 'copyAssets'])
