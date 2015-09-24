@@ -118,6 +118,11 @@ body {
   background: var(--neutral);
 }
 
+.btn:focus {
+  box-shadow: rgba(0, 0, 0, 0.247059) 0px 0px 0px 3px inset;
+}
+
+
 .serif {
   font-family: var(--font-family-serif);
 }
