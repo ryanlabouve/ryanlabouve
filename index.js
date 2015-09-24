@@ -67,7 +67,8 @@ Metalsmith(__dirname)
 
       //Dumb and strong limit
       "mahlimit": function(x, y) {
-        return x.slice(0,y) + '...';
+        var pushing_max = x.length < y ? '' : '...';
+        return x.slice(0,y) + pushing_max;
       }
     }
   }))

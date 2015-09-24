@@ -1,27 +1,33 @@
 <div class="container">
-  <div class="clearfix mxn1 mt2">
-    <div class="sm-col sm-col-4 px1">
-      <div class="box p2">
+  <div class="clearfix mxn1">
+    <div class="sm-col sm-col-4 px1 mt2">
+      <div class="box p3">
         <img class="profile-pic profile-pic-sm center-block" src="../about.jpg" alt="Ryan LaBouve, Profile Pic" />
-        <h1 class="serif center">Ryan LaBouve</h1>
-        <p class="center">Disciple of Jesus Christ &amp; family man.</p>
-        <p class="center">Doer of JS &amp; maker of webs.</p>
-        <p class="center">If you are a stranger, I would love to know you better. If you invite me to coffee I will gladly accept.</p>
+        <h2 class="serif center">Ryan LaBouve</h2>
+        <p class="h5 center">Disciple of Jesus Christ &amp; family man. Doer of JS &amp; maker of webs.</p>
       </div>
     </div>
-     <div class="sm-col sm-col-4 px1">
+     <div class="sm-col sm-col-4 px1 mt2">
+      <div class="box">
+        <div class="bar brand-article">
+          <div class="btn serif italic"><span class="typcn typcn-document-text"></span> Recent Articles</div>
+        </div>
+      </div>
       <div class="box p2">
         {% for post in collections.posts|truncate_list(5) %}
           <div class="bar">
-            <a href="{{post.link}}">
+            <a href="{{post.link}}" class="h6">
 
-              {{post.title|mahlimit(25)}} <div class="muted right">{{post.date|date('m-d-y')}}</div>
+              {{post.title|mahlimit(35)}} <div class="h6 muted right">{{post.date|date('m-d-y')}}</div>
             </a>
+            {% if !loop.last %}
+              <div class="sep"></div>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
     </div>
-     <div class="sm-col sm-col-4 px1">
+     <div class="sm-col sm-col-4 px1 mt2">
       <div class="box">
         <div class="brand-rss bar clearfix">
           <a href="http://twitter.com/ryanlabouve" class="btn btn-icon">
