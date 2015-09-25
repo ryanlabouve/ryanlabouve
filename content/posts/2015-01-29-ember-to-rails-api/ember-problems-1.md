@@ -10,11 +10,7 @@ peak: "Problem 1: you want to connect Ember-CLI to an actual API Welcome to part
 
 Welcome to part 1 of my 10 part series **Ember Problems**. I wrote down 10 _real problems_ I had when learning ember, and we’ll solve them one by one. We’ll be using exploring them from both Ember-CLI and Rails throughout this series. Today we are going to solve _Connecting Ember to a Rails API._
 
-<div class="fitvids">
-
-<div class="fluid-width-video-wrapper" style="padding-top: 75%;"><iframe src="//www.youtube.com/embed/r4H9rnhUyv4" frameborder="0" allowfullscreen="" id="fitvid329052"></iframe></div>
-
-</div>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/r4H9rnhUyv4' frameborder='0' allowfullscreen></iframe></div>
 
 Here’s all the code for today’s lesson: [github.com/ryanlabouve/todomvc-api](https://github.com/ryanlabouve/todomvc-api/tree/ep1)
 
