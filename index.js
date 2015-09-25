@@ -9,7 +9,7 @@ var inPlace = require('metalsmith-in-place');
 var collections = require('metalsmith-collections');
 
 var ignore = require('metalsmith-ignore');
-
+var drafts = require('metalsmith-drafts');
 var swigHelpers = require('metalsmith-swig-helpers')
 
 var swig = require('swig');
@@ -26,6 +26,8 @@ Metalsmith(__dirname)
     '*/.DS_Store',
     '*/*/.DS_Store'
   ]))
+
+  .use(drafts())
 
   .use(collections({
     posts: {

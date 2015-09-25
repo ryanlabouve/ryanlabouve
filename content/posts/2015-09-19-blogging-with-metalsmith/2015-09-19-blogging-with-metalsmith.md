@@ -4,6 +4,7 @@ collection: "posts"
 peak: Death to wordpress. Long live metalsmith!
 date: "2015-09-29"
 link: "blogging-with-metalsmith"
+draft: true
 ---
 During the interview for my last job, I was asked what my blogging platform was.
 
