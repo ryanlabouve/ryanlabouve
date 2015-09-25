@@ -7,6 +7,7 @@ git rm -rf assets bower_components content
 git rm -rf css layouts partials
 git rm -rf bower.json gulpfile.js index.js metalsmith.json
 mv dist/* .
+awk '!/bower_components/' .gitignore > temp && mv temp .gitignore
 rm -rf dist
 git add .
 git commit -m "Publishing to github pages"
