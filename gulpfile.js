@@ -64,4 +64,5 @@ gulp.task('watch', function() {
   gulp.watch("dist/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'copyBowerComponents', 'copyAssets'])
+gulp.task('build', ['metalsmith', 'css', 'copyBowerComponents', 'copyAssets']);
+gulp.task('default', ['serve', 'watch','metalsmith', 'css', 'copyBowerComponents', 'copyAssets']);
