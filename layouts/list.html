@@ -1,20 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{{ title }} | Ryan LaBouve</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Droid+Sans:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
+{% extends "base.html" %}
 
-  {% include "../partials/header.html" %}
-
-  <div class="container">
-    {{ contents|safe }}
-  </div>
-
-
+{% block main %}
+  {{ contents|safe }}
   <div class="container">
     <div class="box py4 px2 sm-px4">
       {% for post in collections.posts %}
@@ -32,8 +19,4 @@
       {% endfor %}
     </div>
   </div>
-
-  {% include "../partials/footer.html" %}
-
-</body>
-</html>
+{% endblock %}
