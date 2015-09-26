@@ -11,6 +11,8 @@ var css = fs.readFileSync('css/app.css', 'utf8');
 var cssnext = require('gulp-cssnext');
 var postcss = require('gulp-postcss');
 
+var plumber = require('gulp-plumber');
+var notify = require("gulp-notify");
 
 var metallog = chalk.white.bgRed.bold;
 // Static server
@@ -35,16 +37,25 @@ gulp.task('metalsmith', function() {
 
 gulp.task('css', function() {
   return gulp.src("css/app.css")
+    .pipe(plumber({
+      errorHandler: function(err) {
+        console.log(err);
+        notify.onError('CSS Pooped the bed. To the logs!');
+        this.emit('end');
+      }
+    }))
     .pipe(postcss([require('postcss-nested')]))
     .pipe(cssnext({
       compress: true
     }))
+    .pipe(plumber.stop())
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream());
 });
 
 gulp.task('copyAssets', function() {
-  return exec("cp -a assets ./dist")
+  exec("cp -a assets ./dist");
+  exec("cp -a js ./dist");
 });
 
 gulp.task('copyBowerComponents', function() {
@@ -62,6 +73,8 @@ gulp.task('watch', function() {
     ['metalsmith', 'css', 'copyBowerComponents', 'copyAssets']);
   gulp.watch('css/**/*', ['css']);
   gulp.watch("dist/*.html").on('change', browserSync.reload);
+  gulp.watch("js/*.js", ['copyAssets']);
+  gulp.watch('js/*.js').on('change', browserSync.reload);
 });
 
 gulp.task('build', ['metalsmith', 'css', 'copyBowerComponents', 'copyAssets']);
