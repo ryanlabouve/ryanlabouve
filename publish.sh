@@ -3,9 +3,9 @@ git branch -D gh-pages
 git push origin --delete gh-pages
 git checkout -b gh-pages
 gulp build
-git rm -rf assets bower_components content
-git rm -rf css layouts partials
-git rm -rf bower.json gulpfile.js index.js metalsmith.json
+rm -rf assets bower_components content
+rm -rf css layouts partials
+rm -rf bower.json gulpfile.js index.js metalsmith.json
 mv dist/* .
 awk '!/bower_components/' .gitignore > temp && mv temp .gitignore
 rm -rf dist

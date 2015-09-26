@@ -7,7 +7,7 @@ link: "maturing-development-in-10-abysmally-hard-but-amazing-steps"
 ---
 3 months ago I joined [RaiseMore](http://raisemore.com), an OKC startup. This was coming from a job as a web developer for a large university… let’s just say the change in pace was noticeable.
 
-![title](http://ryanlabouve.com/wp-content/uploads/2015/04/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
+![title](../posts/2015-04-18-maturing-development-in-10-hard-steps/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
 
 The amount of sheer growth and fulfillment made the job switch absolutely worth it! I love working hard with a team of dedicated and talented folks who are ham-bent on changing the world.
 
@@ -122,6 +122,6 @@ Doing thinks the dumb way is ok as long as nobody dies, nobody is getting fired,
 > “Be careful… burn out looks a lot like ‘easy job’”  
 > — Rick
 
-![Commit Chart](http://ryanlabouve.com/wp-content/uploads/2015/04/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
+![Commit Chart](../posts/2015-04-18-maturing-development-in-10-hard-steps/wpid-ryanlabouve__Ryan_LaBouve_.jpg)
 
-If you are a junior developer and have any questions about this feel free to reach out. Or if you are a senior developer and think I’ve missed something important please feel free to make fun of me on the internet. ![:)](http://ryanlabouve.com/wp-includes/images/smilies/simple-smile.png)
+If you are a junior developer and have any questions about this feel free to reach out. Or if you are a senior developer and think I’ve missed something important please feel free to make fun of me on the internet. ! :)
