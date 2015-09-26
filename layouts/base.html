@@ -7,8 +7,16 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Droid+Sans:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/zenburn.min.css">
     <script src="//cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+    <script src="/bower_components/zepto/zepto.min.js"></script>
   </head>
   <body>
+  <form class='search-form'>
+    <div class="search-bar hide">
+      <div class="container">
+        <input placeholder="SEARCH..."/>
+      </div>
+    </div>
+  </form>
 
   {% include "../partials/header.html" %}
 
@@ -16,9 +24,8 @@
 
   {% include "../partials/footer.html" %}
 
+  <script src="/js/app.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
-
   <script type="text/javascript">
   var clicky_site_ids = clicky_site_ids || [];
   clicky_site_ids.push(100551270);
@@ -30,7 +37,5 @@
     ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
   })();
   </script>
-
-
 </body>
 </html>
