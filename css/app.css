@@ -109,9 +109,7 @@ html {
   --link-color: var(--primary);
   --button-background-color: var(--primary);
   --header-high: 50px;
-}
 
-:root {
   --dark: #463F3F;
   --neutral: #ccc;
   --light: #fff;
@@ -124,6 +122,14 @@ html {
 body {
   background: var(--neutral);
   padding-bottom: var(--space-4);
+}
+
+h1 + ul {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size: var(--h3);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
 }
 
 .btn:focus {
@@ -297,3 +303,11 @@ body {
     height: var(--header-high);
   }
 }
+
+blockquote {
+  border-left: 3px solid #eee;
+  font-size: var(--h3);
+  margin: var(--space-2) 0;
+  padding-left: var(--space-2);
+}
+

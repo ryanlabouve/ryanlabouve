@@ -1,44 +1,75 @@
 ---
 title: "Blogging with Metalsmith"
 collection: "posts"
-peak: Death to wordpress. Long live metalsmith!
+peak: I killed wordpress from my stack...
 date: "2015-09-29"
 link: "blogging-with-metalsmith"
-draft: true
 ---
-During the interview for my last job, I was asked what my blogging platform was.
 
-It was wordpress.
+I switched from Wordpress to [metalsmith](http://www.metalsmith.io/).
 
-I joked for this not to be held against me. Time to change anyways.
+And, instead of having a _behind the curtains_ approach, I decided to just OSS all the things and do it out in the open: [github.com/ryanlabouve/ryanlabouve](https://github.com/ryanlabouve/ryanlabouve).
 
+My biggest goals in switching:
 
-Goalzzz:
+* Easy to author
+* Easy to deploy
+* Effective version control
+* Versital and customizable enough to explore new technology
 
-* Easy to Author
-* Easy to Deploy
-* Version Controlled
-* Simple (not to be confused with easy)
+## Enter Metalsmith
 
-Bonuses:
----
-title: "Gulp for CSS: Getting Sophisticated"
-collection: "posts"
-peak: Different development and production stylesheets Development: easy to debug Production: minified Start automating repetitive tasks I recently evangelized…
-date: "2014-11-27"
-link: "gulp-for-css-pt2"
----
-* Easy asset management
-* Static Site
-* Unnecessarily Configurable
-* Unnecessarily Bleeding Edge tech
+> "An extremely simple, pluggable static site generator."
 
-And to make some things _simpler_, I wanted it to be a seamless transition of
-my current site to a new one.
+* Static Site Generator
+* Plugins for All the Things
+* Very much _chose your own adventure_
 
+Metalsmith is a static site generator written in node. The documentation is not great and most of the tutorials are out of date... so it's hard for me to easily recommend unless you are set on node and wanting to get off the beaten path and/or needing a tool that's flexible enough to customize ultra-customize.
 
-I'd still want to do a blag thing eventually
+For further exploration, some helpful links:
 
-## First, Setup metalsmith
+* http://blog.andyjiang.com/introduction-to-metalsmith/
+* http://blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/
+* http://www.okaythree.com/2015/03/building-a-blog-with-metalsmith/
 
-## Next, including batteries with gulp
+## Deploy with gh-pages
+
+I have a simple shell script that runs the build scripts and pushes the files to github pages.
+
+Feel free to checkout the [deploy script](https://github.com/ryanlabouve/ryanlabouve/blob/master/publish.sh).
+
+## Gulp for the rough edges
+
+Metalsmith, while a great static site generator, does not cut it, imo, as a build system.
+
+Instead of trying to shoe-horn it into doing so (which is more possible than you'd think) I just used gulp to do additional lifting.
+
+### local development
+
+I use [Browser Sync](http://www.browsersync.io/) to serve my assets during development.
+
+Gulp watches all content and style, running appropriate build tasks as these change
+
+### running metalsmith
+
+I run metalsmith through gulp, and then execute a series of dependent tasks when this finishes (i.e. css and asset related tasks).
+
+### basscss, postcss, and cssnext
+
+Instead of using SASS, I decided to jump on the new hotness and use postcss.
+
+I'm using [basscss](http://www.basscss.com/) for css.
+
+I copy pasta'd the important parts of [BassPlate](https://github.com/basscss/bassplate) to get started and customized from there.
+
+From there I use [cssnext](http://cssnext.io/) and a few other plugins, as you can see [here](https://github.com/ryanlabouve/ryanlabouve/blob/master/gulpfile.js#L36).
+
+### No jQuery or Bootstrap
+
+Since I killed Wordpress, go pure iconoclast and get rid of jQuery and Bootstrap from my blog.
+
+<p class="center serif bold italic mt4">—In Conclusion—</p>
+
+Writing a blog should be a tool for learning and a way to share your knowledge with others. So yah, there are some rough edges, and in the early days I spent more time tweaking my build process than I did writing.
+ 
