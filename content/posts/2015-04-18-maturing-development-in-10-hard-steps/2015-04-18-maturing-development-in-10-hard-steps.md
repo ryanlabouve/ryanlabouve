@@ -1,9 +1,9 @@
 ---
 title: "Maturing Development In 10 Abysmally Hard but Amazing Steps"
 collection: "posts"
-peak: 3 months ago I joined RaiseMore, an OKC startup. This was coming from a job as a web…
 date: "2015-04-18"
 link: "maturing-development-in-10-abysmally-hard-but-amazing-steps"
+peak: Working at a startup tought me some things about development that have changed everything for me.
 ---
 3 months ago I joined [RaiseMore](http://raisemore.com), an OKC startup. This was coming from a job as a web developer for a large university… let’s just say the change in pace was noticeable.
 

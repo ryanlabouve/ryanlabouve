@@ -2,7 +2,7 @@
 title: "Gulp for CSS: Up and Running"
 collection: "posts"
 peak: Setting up Gulp Separate authoring stylesheets from production stylesheets Automating Some Basic SASS things I recently evangelized using…
-date: 2014-11-24
+date: "2014-11-24"
 link: gulp-for-css-pt1
 ---
 

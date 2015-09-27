@@ -1,6 +1,6 @@
 ---
 title: "Ember Array Proxy: WTF Is This?"
-date: 2015-09-24
+date: "2015-09-24"
 collection: posts
 peak: todo
 draft: true

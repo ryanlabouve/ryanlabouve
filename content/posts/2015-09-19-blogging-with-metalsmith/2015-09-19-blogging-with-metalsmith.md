@@ -1,9 +1,9 @@
 ---
 title: "Blogging with Metalsmith"
 collection: "posts"
-peak: I switched from Wordpress to Metalsmith. And, instead of having a behind the curtains approach, I decided to just OSS all the things and do it out in the open...
-date: "2015-09-29"
+date: "2015-09-19"
 link: "blogging-with-metalsmith"
+peak: Blogging with wordpress sucked. So, I switched to metalpress.
 ---
 
 I switched from Wordpress to [metalsmith](http://www.metalsmith.io/).
