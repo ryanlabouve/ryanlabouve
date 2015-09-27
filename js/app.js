@@ -6,6 +6,11 @@ function toggleSearch() {
   }
 }
 
+function toggleMenu() {
+  var $menu = $('.mobile-menu');
+  $menu.toggleClass('hide');
+}
+
 $(function() {
   $('.btn-search').on('click', function(e) {
     e.preventDefault();
@@ -16,5 +21,10 @@ $(function() {
     e.preventDefault();
     var searchVal = $('.search-bar input').val();
     window.location.href = 'https://google.com/search?q=site%3Aryanlabouve.com+' + searchVal;
+  });
+
+  $('.open-menu, .close-menu').on('click', function(e) {
+    e.preventDefault();
+    toggleMenu();
   });
 });

@@ -193,7 +193,7 @@ h1 + ul {
     }
   }
 
-  .btn.btn-search {
+  .btn.btn-dark {
     box-shadow: 0 -1px #666 inset;
     background: color( var(--dark) shade(50%));
     &:hover {
@@ -323,4 +323,8 @@ blockquote {
     width: 100%;
     height: 100%;
   }
+}
+
+.close-menu {
+  cursor: pointer;
 }
