@@ -122,6 +122,7 @@ html {
 body {
   background: var(--neutral);
   padding-bottom: var(--space-4);
+  color: #333;
 }
 
 h1 + ul {
@@ -277,6 +278,12 @@ h1 + ul {
   &:hover{
     background: color(var(--brand-rss) shade(20%));
   }
+}
+
+.brand-menu {
+  background: #222;
+  color: #efefef;
+  border-bottom: 1px solid #666;
 }
 
 .brand-article {
