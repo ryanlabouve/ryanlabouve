@@ -54,7 +54,7 @@ Now if we boot up our rails server, and look at our new `todo` route,
 
 we’ll see an empty json array.
 
-![Ember Problems 1: Data After Scaffold](http://ryanlabouve.com/wp-content/uploads/2015/01/ep1-after-scaffold.png)
+![Ember Problems 1: Data After Scaffold](../posts/2015-01-29-ember-to-rails-api/ep1-after-scaffold.png)
 
 ### Adding Fake Data
 
@@ -85,7 +85,7 @@ Now we can use rake to run the seeds.
 
 Now we can refresh `http://localhost:3000/todos` to verify that our seeds works.
 
-![Preview of Seed Data](http://ryanlabouve.com/wp-content/uploads/2015/01/ep1-data-preview.png)
+![Preview of Seed Data](../posts/2015-01-29-ember-to-rails-api/ep1-data-preview.png)
 
 ### Switching to Active Model Serializer
 
@@ -115,7 +115,7 @@ Let’s look at the file we just created, `serializers/todo_serializer.rb`. Anyt
 
 Then if we refersh `http://localhost:3000/todos`, we’ll also notice that we have a `todos:` root for our json (which is what Ember expects), and we have ommited all unneeded properties from our objects (i.e. created_at and updated_at).
 
-![After Serializer](http://ryanlabouve.com/wp-content/uploads/2015/01/ep1-after-serializer.png)
+![After Serializer](../posts/2015-01-29-ember-to-rails-api/ep1-after-serializer.png)
 
 ## Switching Ember App to ActiveModelAdapter
 
@@ -138,7 +138,7 @@ And finally, let’s switch our whole app to run off the API we just built! (Sur
 
 Now go to the browser and check it out!
 
-![Todomvc with API](http://ryanlabouve.com/wp-content/uploads/2015/01/ep1-todomvc.png)
+![Todomvc with API](../posts/2015-01-29-ember-to-rails-api/ep1-todomvc.png)
 
 Thanks for joining me on part one of Ember Problems. Next time we’ll be looking at pagination.
 
