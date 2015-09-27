@@ -1,7 +1,7 @@
 ---
 title: "Blogging with Metalsmith"
 collection: "posts"
-peak: I killed wordpress from my stack...
+peak: I switched from Wordpress to Metalsmith. And, instead of having a behind the curtains approach, I decided to just OSS all the things and do it out in the open...
 date: "2015-09-29"
 link: "blogging-with-metalsmith"
 ---
