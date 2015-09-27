@@ -7,14 +7,15 @@
       {% for post in collections.posts %}
         <div class="post-li lg-px4">
           <a href="{{post.link}}" class="clearfix">
-            <div class="right">{{post.date|date('F j, Y')}}</div>
-            <h2 class="serif h1 text-dark">{{post.title}}</h2>
-            <p class="text-neutral">
+            <span class="right">{{post.date|date('F j, Y')}}</span>
+            <h2 class="serif mt0 h1 text-dark">{{post.title}}</h2>
+            <p class="mt2 text-neutral">
               {{post.peak}}
             </p>
-            <a class="btn btn-primary right" href="{{post.link}}">Read More</a>
+            <br>
+            <span class="primary left" href="{{post.link}}">Read More</span>
           </a>
-          <div class="sep mt4 mb2"></div>
+          <div class="sep mt3 mb2"></div>
         </div>
       {% endfor %}
     </div>

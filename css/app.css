@@ -328,3 +328,7 @@ blockquote {
 .close-menu {
   cursor: pointer;
 }
+
+.primary {
+  color: var(--primary);
+}
