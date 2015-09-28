@@ -5,8 +5,14 @@ link: ember-problems-pagination-with-api
 collection: "posts"
 peak: "When you have truckloads of data, you can't just have once massive payload. Let's talk about how to paginate."
 ---
-## Jumpstart the API 
 
+Ember Project: https://github.com/ryanlabouve/toy-blog
+
+Rails Project: https://github.com/ryanlabouve/toy-blog-api
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//OJWH-BxNZdo' frameborder='0' allowfullscreen></iframe></div>
+
+## Jumpstart the API 
 (If you want to know more about how this is setup, check Ember Problems Episode 1.)
 
 Go ahead and clone up our play API. It's very similar to Episode 1... go ahead and checkout `v0.0.1` if you want to follow along.
@@ -14,9 +20,10 @@ Go ahead and clone up our play API. It's very similar to Episode 1... go ahead a
 ```
 git clone https://github.com/ryanlabouve/toy-blog-api
 cd toy-blog-api
+bin/rake db:migrate
 git checkout tags/v0.0.1
 bundle
-bundle exec rake db:seeds
+bin/rake db:seeds
 rails s
 ```
 
@@ -36,7 +43,7 @@ Let's brew up a new ember project for our api. Or, if you would prefer to clone 
 ember new toy-blog
 
 // Get the adapter stuff rolling
-ember install active-model-adapter --save-dev
+ember install active-model-adapter
 ember generate adapter application
 ```
 
@@ -139,7 +146,7 @@ Post.page(2).per(10) # => # look at results in console
 
 ### Kaminari in Our Post Controller
 
-Using this we can fragment our results instead of listing them all in one return. To move around the whole collection, we'll use query parameteres (e.g. `?page=2`).
+Using this we can fragment our results instead of listing them all in one return. To move around the whole collection, we'll use query parameters (e.g. `?page=2`).
 
 First, let's chop up our results from our controller.
 
