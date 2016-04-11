@@ -3,6 +3,7 @@
   "frontmatter": true,
   "plugins": {
     "metalsmith-markdown": true,
+    "metalsmith-drafts": true,
     "metalsmith-permalinks": "posts/:title",
     "metalsmith-layouts": {
       "default": "default.html",

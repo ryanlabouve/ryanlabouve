@@ -27,7 +27,7 @@ gulp.task('serve', function() {
 gulp.task('metalsmith', function() {
   // must run metalsmith with es6 flags
   console.log(metallog('Enter the Metalsmith'));
-  exec("node --harmony_generators ./index.js", function(err, stdout, stderr) {
+  exec("node --harmony ./index.js", function(err, stdout, stderr) {
     console.log(chalk.white.bgRed.bold(stdout));
     console.log(chalk.white.bgRed.bold(stderr));
     console.log(chalk.white.bgRed.bold('Leaving the Metalsmith'));
