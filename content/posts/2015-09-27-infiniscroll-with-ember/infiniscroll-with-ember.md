@@ -1,9 +1,9 @@
 ---
 title: "Ember Problems Infiniscroll with an API"
 collection: "posts"
-date: "2015-9-27"
+date: "2015-09-27"
 link: ember-problems-infiniscroll-with-api
-peak: "When you don't want to click next, use infiniscroll to load in data smootly"
+peak: "When you don't want to click next use infiniscroll to load in data smootly"
 ---
 
 Instead of clicking next for days, let's hookup infiniscroll! This is part 3 of my 10 part series on Ember Problems.
