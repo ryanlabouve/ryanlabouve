@@ -133,6 +133,12 @@ h1 + ul {
   padding-bottom: var(--space-2);
 }
 
+code {
+  background: #FFFDCA;
+  padding: 0 0.3em;
+  font-weight: bold;
+}
+
 .btn:focus {
   box-shadow: rgba(0, 0, 0, 0.247059) 0px 0px 0px 3px inset;
 }
