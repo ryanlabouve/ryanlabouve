@@ -76,9 +76,74 @@ export default function() {
 }
 ```
 
+
 ```
 ember g acceptance-test public-posts-test
 ```
+
+```
+import { test } from 'qunit';
+import moduleForAcceptance from 'ember-jwt-toy-blog/tests/helpers/module-for-acceptance';
+
+moduleForAcceptance('Acceptance | public posts');
+
+test('visited /', function(assert) {
+  visit('/');
+  server.createList('public-post', 5);
+
+  andThen(function() {
+    assert.equal(
+      find('.public-post').length,
+      5,
+      'we can see all the public posts from /'
+    );
+  });
+});
+```
+
+And now if we `ember serve` and visit `http://localhost:3000`, Yay! Failing test!
+
+Now let's get'em green.
+
+`ember g model publicPost`
+
+```
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+
+export default Model.extend({
+  title: attr('string'),
+  body: attr('string'),
+  createdAt: attr('date')
+});
+```
+
+`ember g route application`
+
+```
+// app/routes/application.js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model() {
+    return this.store.findAll('publicPost');
+  }
+});
+```
+
+```
+// app/templates/application.hbs
+{{#each model as |post|}}
+  <div class="public-post">
+    {{post.title}}
+  </div>
+{{else}}
+  No Public Posts Found!
+{{/each}}
+```
+
+YAY! Green tests.
+
 
 ## The Prototype
 
