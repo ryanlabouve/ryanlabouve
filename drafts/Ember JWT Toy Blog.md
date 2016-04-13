@@ -146,7 +146,15 @@ YAY! Green tests.
 
 
 ## The Prototype
+### Qucik sketch of what we're making
 
 ### BootStrap
 
 ## Public Posts
+
+Cut over to live API
+
+## Signing in and out
+
+## Private Posts
+
