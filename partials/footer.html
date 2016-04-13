@@ -17,7 +17,7 @@
       <div class="box p2">
         {% for post in collections.posts|truncate_list(5) %}
           <div class="bar">
-            <a href="{{post.link}}" class="h6">
+            <a href="/{{post.link}}" class="h6">
 
               {{post.title|mahlimit(35)}} <div class="h6 muted right">{{post.date|date('m-d-y')}}</div>
             </a>
