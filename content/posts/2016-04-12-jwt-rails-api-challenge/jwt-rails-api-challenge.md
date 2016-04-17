@@ -121,12 +121,12 @@ User.create!({
 100.times do
   PublicPost.create!(
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraphs
+    body: Faker::Lorem.paragraphs.join(' ')
   )
 
   PrivatePost.create!(
     title: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraphs
+    body: Faker::Lorem.paragraphs.join(' ')
   )
 end
 ```
@@ -325,3 +325,12 @@ curl -X "GET" "http://localhost:3000/private-posts" \
 	-H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJI....." \
 	-H "Content-Type: application/json"
 ```
+
+## Edit 4/14 Dang you cors!
+
+When hookig this API up to the ember app that goes along with the next tutorial,
+I realized that I didn't setup cors.
+
+Check out [This
+commit](https://github.com/ryanlabouve/rails-api-jwt-toy-blog/commit/976a26fbacaf63d68752eae62307fd499805c89c)
+for more information on how to do this.
