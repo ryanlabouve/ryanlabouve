@@ -1,55 +1,64 @@
-# Ember Blog with JWT and Ember Simple Auth
+---
+title: "Ember Blog with JWT and Ember Simple Auth, Part 1"
+collection: "posts"
+date: "2016-04-17"
+link: ember-blog-with-jwt-and-esa
+peak: "Setup Mirage and connect to Rails API for our toy blog"
+---
 
+{% raw %}
 Goal:
 
 > Serve an API backed blog with Public (available to everyone) and Private posts (have to log in to see).
 
-We'll break this into two parts:
+We are going to go through the full process for doing this project, including seting up Mirage and Testing our way through. Follow along below or grab the [code on github](https://github.com/ryanlabouve/ember-jwt-esa-blog).
 
-__Part I:__ Mirage, Public Posts, and Connecting to API
-
-__Part II:__ Ember Simple Auth, User Login, and Private Posts
-
+```
+ember new ember-jwt-esa-blog`
+```
 ##### Notes:
 
-* I'll favor walking through the real process instead of showing a hanful of disjointed tricks (aka. #longread)
 * We'll be using [Ember Simple Auth](https://github.com/simplabs/ember-simple-auth) for authentication
-* Our API was built in [this previous tutorial](http://ryanlabouve.com/jwt-rails-api-challenge/).
-* Authentication is done with [JWT](https://jwt.io/)
-* Our data is JSONAPI compliant
+* Our API was built in [this previous tutorial](http://ryanlabouve.com/jwt-rails-api-challenge/) ([JWT](https://jwt.io/) + JSON API)
 * We'll use [Mirage](http://www.ember-cli-mirage.com/) to mock the API for testing
-* We'll use Bootstrap 4 to spiffy things up with minimal hassle
 
-Let's get started! `ember new ember-jwt-esa-blog`.
+<hr>
+<h2>What We're Making, More Detail</h2>
+<div class="clearfix">
+  <div class="col sm-col-4">
+    <div class="bold">Public Posts</div>
+    <ul>
+      <li>List of public posts on left</li>
+    </ul>
+    __User Login__
+    <ul>
+      <li>*User not logged in–* show a login form</li>
+      <li>*User logged in–* show a button to log out in place of the form
+</li>
+    </ul>
 
-## What We're Making, More Detail
+    __Private Posts__
 
-__Public Posts__
+    <ul>
+      <li>*User not logged in–* show a notice to login</li>
+      <li>*User logged in–* Show a lists of posts
+</li>
+    </ul>
 
-* List of public posts on left
+    <h3>In terms of components</h3>
+    <ul>
+      <li>`{{public-posts}}` — A list of all public posts</li>
+      <li>`{{blog-post}}` — A single post</li>
+      <li>`{{login-form}}` — A form to help users login / logout</li>
+      <li>`{{private-posts}}`— A list of all private posts</li>
+    </ul>
+  </div>
+  <div class="col sm-col-8">
+    ![Our Prototype w/Components](../posts/2016-04-17-ember-blog-with-jwt-and-esa/prototype-components.jpg)
+  </div>
+</div>
 
-__User Login__
-
-* *User not logged in–* show a login form
-* *User logged in–* show a button to log out in place of the form
-
-
-__Private Posts__
-
-* *User not logged in–* show a notice to login
-* *User logged in–* Show a lists of posts
-
-![Our Prototype](/Users/luckyrye/Desktop/prototype.jpg)
-
-
-### In terms of components
-
-* `{{public-posts}}` — A list of all public posts
-* `{{blog-post}}` — A single post
-* `{{login-form}}` — A form to help users login / logout
-* `{{private-posts}}`— A list of all private posts
-
-![Our Prototype w/Components](/Users/luckyrye/Desktop/prototype-components.jpg)
+<hr>
 
 ## Mocking The Backend & TDD for Public Posts
 
@@ -145,7 +154,7 @@ test('public posts on /', function(assert) {
 
 And now if we `ember serve` and visit `http://localhost:3000/tests`, Yay! Failing test!
 
-![/Users/luckyrye/Desktop/esa\ jwt\ pic/pubic-post-failing-tests.jpg](/Users/luckyrye/Desktop/esa\ jwt\ pic/pubic-post-failing-tests.jpg)
+![Public Post Failing](../posts/2016-04-17-ember-blog-with-jwt-and-esa/pubic-post-failing-tests.jpg)
 
 ([code checkpoint](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/3470e918ccddb93d22e88fa2553af112d8ba27d1))
 
@@ -232,7 +241,7 @@ export default Model.extend({
 });
 ```
 
-![Model tests in testem](/Users/luckyrye/Desktop/green-model-tests.jpg)
+![Model tests in testem](../posts/2016-04-17-ember-blog-with-jwt-and-esa/green-model-tests.jpg)
 
 And now we can go back to filter for all...
 
@@ -253,8 +262,9 @@ We need to actually display them!
 
 :boom: passing tests!
 
-> show from `pauseTest();` and make note about how there is currently nothing on `http://localhost:4200`.
-> ![/Users/luckyrye/Desktop/esa jwt pic/public-post-pause-test.jpg](/Users/luckyrye/Desktop/esa jwt pic/public-post-pause-test.jpg)
+> Below is a screenshot from `pauseTest();`, where we can preview Mirage doing its thing.
+
+![Public Posts Pause Test](../posts/2016-04-17-ember-blog-with-jwt-and-esa/public-post-pause-test.jpg)
 
 ([code checkpoint](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/37724c13a56ac3ed2b5c550ec3e7901855195d82))
 
@@ -321,9 +331,11 @@ export default Ember.Component.extend({
 And now let's make one more refactor for our `{{blog-post}}` component.
 
 #### {{blog-post}} Minor Refactor #2
+
 ```
 ember g component blog-post --pod
 ```
+
 ```
 // app/components/public-post/template.hbs
 {{#each posts as |post|}}
@@ -360,7 +372,7 @@ test('it renders', function(assert) {
 
 And now, great!! Failing tests. Once we implement this functinality, we'll be sure to have generally the right thing showing on screen.
 
-![/Users/luckyrye/Desktop/esa jwt pic/blog-post-failing.jpg](/Users/luckyrye/Desktop/esa jwt pic/blog-post-failing.jpg)
+![blog-post-failing.jpg](../posts/2016-04-17-ember-blog-with-jwt-and-esa/blog-post-failing.jpg)
 
 ```
 // app/components/blog-post/template.hbs
@@ -372,7 +384,6 @@ And now, great!! Failing tests. Once we implement this functinality, we'll be su
     {{body}}
   </div>
 </div>
-
 ```
 
 YAY! Green tests.
@@ -436,411 +447,11 @@ export default JSONAPIAdapter.extend({
 
 And now if we look at our browser, we should see a lot of posts loading from the api!
 
-![/Users/luckyrye/Desktop/esa jwt pic/cut-over-to-api.jpg](/Users/luckyrye/Desktop/esa jwt pic/cut-over-to-api.jpg)
+![Cut to api](../posts/2016-04-17-ember-blog-with-jwt-and-esa/cut-over-to-api.jpg)
 
 This is actually quite cool. We've implemented all of this without a live API, and then we cutover to the actually API and it just works.
 
 ([checkpoint, level complete](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/37b91cfd9c3bbf990581a1fa3fa242f5d196c87d))
 
 Now that we have our API hooked up and public information flowing correctly, next up is working on Ember Simple Auth, Logging in and Out, and Private Posts! See ya next time!
-
-## Setting up Ember Simple Auth
-
-### Ember Simple Auth
-
-Let's install Ember Simple Auth (ESA), configure mirage to mock our particular authentication strategy, and then TDD the implementation.
-
-1. Install addon
-
-`ember install ember-simple-auth`
-
-2. Extend mirage to mock/stub auth
-3. Setup acceptance test for login and logout
-4. Implement login form to verify everything is passing
-  * login form & actions
-  * config
-  * authenticator
-  * authorizer
-
-### Extend mirage to handle auth
-
-We'll need to customize ESA to how our API handles authentication. To guide our customization, we are going to make mirage act like our server does currently, and TDD our way through, so even when things are tricky we have a good feedback loop.
-
-#### Using Authenticators to Request our Token
-
-In vanilla CURL language, to request a token we need to `POST` to a specified endpoint, with our username and password in a specified format.
-
-In our case, that means:
-
-```
-POST http://localhost:3000/knock/auth_token
-{ "auth" : { "email": "lester@tester.com", "password" : "test1234" }}
-```
-
-If it's successful, we'll get back a `201 Created` along with the token associated to our user.
-
-```
-201 Created
-{ "jwt" : "token123456789" }
-```
-
-If the username and password are incorrect we'll get a `404`.
-
-Simulating this in mirage looks like this:
-
-```
-this.post('/knock/auth', (db, request) =>  {
-  const req = JSON.parse(request.requestBody);
-  const pw = Ember.get(req, 'auth.password');
-
-  if(pw === 'test1234') {
-    return new Mirage.Response(201, {}, { jwt: 'hotdog' });
-  } else {
-    return new Mirage.Response(404, {}, {});
-  }
-});
-```
-
-#### Using that token to make requests
-
-And when we make requests, we pass the token
-
-```
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
-GET /private-posts
-```
-
-Assuming our token is correct, the request will process normally. If the token is invalid, then we'll get a `401 Unauthorized`.
-
-To simulate this in mirage, we'll do
-
-```
-  // mirage/config.js
-  ...
-  
-  this.get('/private-posts', ({ privatePost }, request) => {
-    const token = Ember.get(request, 'requestHeaders.Authorization');
-    if (token === 'hotdog') {
-      return privatePost.all();
-    } else {
-      return new Mirage.Response(401, {}, {});
-    }
-  });
-  ...
-```
-
-#### Mirage for our PriavtePosts
-
-We'll repeat the process early for getting the `PrivatePost` resource setup in mirage.
-
-```
-ember g mirage-model privatePost
-ember g mirage-factory privatePost
-```
-
-And again, this should make the Schema from the API `PrivatePost(title:string, body:text, type:string)`.
-
-```
-// mirage/factories/private-post.js
-import { Factory, faker } from 'ember-cli-mirage';
-
-export default Factory.extend({
-  body: faker.lorem.words(),
-  title: faker.lorem.paragraphs(),
-  createdAt: faker.date.past()
-});
-
-```
-
-### Acceptance Test Customizing our Auth
-
-To create a tight feedback loop, we'll go ahead and work on `{{login-form}}`, since this will be able to quickly hit logging  in and out.
-
-Here are the main cases we want to handle:
-
-* If a user is not logged in, they see a login form
-* If a user is logged in, they see a logout button
-* If a user logs in, they go from seeing a login from to a logout button
-* If a user logs out, they go from seeing a logout button to a login form
-* If a user puts in the wrong login credentials, they see a login error
-
-> This process seems tedious, but focusing on TDD our way through helps us keep focus and make consistent progress on a good path.
-
-```
-import { test } from 'qunit';
-import moduleForAcceptance from 'ember-jwt-toy-blog/tests/helpers/module-for-acceptance';
-
-// These test helps are included with ESA, and
-// are absolutely critical for sane testing.
-import {
-  currentSession,
-  invalidateSession ,
-  authenticateSession
-} from 'ember-jwt-toy-blog/tests/helpers/ember-simple-auth';
-
-moduleForAcceptance('Acceptance | login');
-
-test('If a user is not logged in, they see a login form', function(assert) {
-  invalidateSession(this.application);
-  visit('/');
-
-  andThen(function() {
-    const loginFormPresent = find('#loginForm').length > 0 ? true : false;
-    assert.equal(loginFormPresent, true);
-  });
-});
-
-test('a non-rando sees a current-user info', function(assert) {
-  authenticateSession(this.application);
-  visit('/');
-
-  andThen(function() {
-    assert.equal(currentURL(), '/');
-    const logoutBtnPresent = this.$('.logoutBtn').length > 0 ? true : false;
-    assert.equal(
-      logoutBtnPresent,
-      true,
-      'An authed user should see the logout button'
-    );
-
-    const loginFormPresent = find('#loginForm').length > 0 ? true : false;
-    assert.equal(
-      loginFormPresent,
-      false,
-      'An authed user not should see the login form'
-    );
-  });
-});
-
-test('user can logout', function(assert) {
-  authenticateSession(this.application);
-  visit('/');
-  click('.logoutBtn');
-
-  andThen(() => {
-    const sesh = currentSession(this.application);
-    const isAuthed = Ember.get(sesh, 'isAuthenticated');
-    assert.equal(
-      isAuthed,
-      false,
-      'After clicking logout, the user is no longer logged in'
-    );
-
-  });
-});
-
-test('user can login', function(assert) {
-  invalidateSession(this.application);
-  visit('/');
-
-  fillIn('.username-field', 'lester@test.com');
-  fillIn('.password-field', 'test1234');
-  click('.login-btn');
-
-  andThen(() => {
-    const sesh = currentSession(this.application);
-    const isAuthed = Ember.get(sesh, 'isAuthenticated');
-    assert.equal(
-      isAuthed,
-      true,
-      'after a user submits good creds to login form, they are logged in'
-    );
-  });
-});
-
-test('user can fail to login', function(assert) {
-  invalidateSession(this.application);
-  visit('/');
-
-  fillIn('.username-field', 'lester@test.com');
-  fillIn('.password-field', 'wrongPassword');
-  click('.login-btn');
-
-  andThen(() => {
-    const sesh = currentSession(this.application);
-    const isAuthed = Ember.get(sesh, 'isAuthenticated');
-    assert.equal(
-      isAuthed,
-      false,
-      'User submits bad username and password, fails'
-    );
-
-    isShowingLoginFails = find('.login-err').length > 0 ? true : false;
-    assert.equal(
-      isShowingLoginFails,
-      true,
-      'Shows user an error when they put in bad deets'
-    );
-  });
-});
-```
-
-#### Authenticator
-
-#### Authorizer
-
-
-### Test driving the next few features
-
-`ember g acceptance-test private-post`
-
-Acceptance test for seeing "must log in first to see private posts"
-
-
-```
-import { test } from 'qunit';
-import moduleForAcceptance from 'ember-jwt-toy-blog/tests/helpers/module-for-acceptance';
-
-moduleForAcceptance('Acceptance | private posts');
-
-test('private-posts on /', function(assert) {
-  visit('/');
-  server.createList('private-post', 5);
-
-  andThen(function() {
-    assert.equal(
-      find('.private-post').length,
-      0,
-      'We cannot see any private posts if we don\'t login'
-    );
-  });
-});
-```
-
-
-Acceptance test for seeing "
-
-
-### Private Posts
-
-
-TODO: Useful for testing auth stuff? http://www.slideshare.net/BenLimmer/automated-testing-in-emberjs
-
-TODO: http://www.slideshare.net/mixonic/testing-ember-apps-managing-dependency <- make a point to use
-
-http://www.slideshare.net/bantic/ember-testing-internals-with-ember-cli
-
-https://madhatted.com/2014/8/29/testing-ember-js-apps-managing-dependencies
-
-http://kellysutton.com/2015/02/17/unit-testing-ember-controllers-backed-by-ember-data.html
-
-## TDD the rest of the things
-### Public Posts
-
-First, we'll move the list of posts into their own component.
-```
-ember g component public-posts --pod
-```
-
-```
-<div class="list-group">
-  <div class="list-group-item">
-    <div class="lead">Public Posts</div>
-  </div>
-  {{#each posts as |post|}}
-    <div class="list-group-item public-post">
-      <h5 class="list-group-item-heading">
-        {{post.title}}
-      </h5>
-      <div class="list-group-item-text">
-        {{post.body}}
-      </div>
-    </div>
-  {{else}}
-    No Public Posts Found!
-  {{/each}}
-</div>
-```
-
-TODO something with component test
-
-At this point, our tests are still passing.
-
-Now let's move posts into their own components
-
-```
-ember g component blog-post --pod
-```
-
-```
-{{! app/components/public-post/template.hbs }}
-<div class="list-group">
-  <div class="list-group-item">
-    <div class="lead">Public Posts</div>
-  </div>
-  {{#each posts as |post|}}
-    {{blog-post
-      title=post.title
-      body=post.body
-      testClass='public-post'
-      }}
-  {{else}}
-    No Public Posts Found!
-  {{/each}}
-</div>
-```
-
-and
-
-```
-{{! app/components/blog-post/template.hbs }}
-<div class="list-group-item {{testClass}}">
-  <h5 class="list-group-item-heading">
-    {{title}}
-  </h5>
-  <div class="list-group-item-text">
-    {{body}}
-  </div>
-</div>
-```
-
-
-### BootStrap
-
-Add bootstrap (quick and dirty method):
-```
-<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" >
-```
-
-For icons...
-
-`ember install ember-font-awesome`
-
-### Layout
-
-Here's we'll just push things around in generally the right spot.
-
-```
-// app/templates/application.hbs
-<div class="container">
-  <div class="row header">
-    <div class="col-sm-6">
-      <h1>Posts</h1>
-    </div>
-    <div class="col-sm-6">
-      {{current-user}}
-    </div>
-  </div>
-
-  <div class="row body">
-    <div class="col-sm-6">
-     {{public-posts}}
-     {{! We'll move this block inside public-posts in a sec}}
-     {{#each model as |post|}}
-	    <div class="public-post">
-	      {{post.title}}
-	    </div>
-	  {{else}}
-	    No Public Posts Found!
-	  {{/each}}
-    </div>
-    <div class="col-sm-6">
-      {{private-posts}}
-    </div>
-  </div>
-</div>
-```
-
-##### Additional References
-
-https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/
+{% endraw %}
