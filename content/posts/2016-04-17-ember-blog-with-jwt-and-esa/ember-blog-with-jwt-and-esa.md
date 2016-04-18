@@ -11,6 +11,8 @@ Goal:
 
 > Serve an API backed blog with Public (available to everyone) and Private posts (have to log in to see).
 
+![Final Product](../posts/2016-04-17-ember-blog-with-jwt-and-esa-2/final-product-anno.jpg)
+
 We are going to go through the full process for doing this project, including seting up Mirage and Testing our way through. Follow along below or grab the [code on github](https://github.com/ryanlabouve/ember-jwt-esa-blog).
 
 ```
