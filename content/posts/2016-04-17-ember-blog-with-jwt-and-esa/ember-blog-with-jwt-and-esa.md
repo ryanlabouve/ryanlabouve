@@ -154,7 +154,7 @@ test('public posts on /', function(assert) {
 });
 ```
 
-And now if we `ember serve` and visit `http://localhost:3000/tests`, Yay! Failing test!
+And now if we `ember serve` and visit `http://localhost:4200/tests`, Yay! Failing test!
 
 ![Public Post Failing](../posts/2016-04-17-ember-blog-with-jwt-and-esa/pubic-post-failing-tests.jpg)
 

@@ -39,7 +39,7 @@ __Private Posts__
 * *User not logged in–* show a notice to login
 * *User logged in–* Show a lists of posts
 
-![Our Prototype](/Users/luckyrye/Desktop/prototype.jpg)
+![Our Prototype](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/prototype-components.jpg)
 
 
 ### In terms of components
@@ -49,7 +49,7 @@ __Private Posts__
 * `{{login-form}}` — A form to help users login / logout
 * `{{private-posts}}`— A list of all private posts
 
-![Our Prototype w/Components](/Users/luckyrye/Desktop/prototype-components.jpg)
+![Our Prototype w/Components](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/prototype-components.jpg)
 
 ## Mocking The Backend & TDD for Public Posts
 
@@ -145,7 +145,7 @@ test('public posts on /', function(assert) {
 
 And now if we `ember serve` and visit `http://localhost:3000/tests`, Yay! Failing test!
 
-![/Users/luckyrye/Desktop/esa\ jwt\ pic/pubic-post-failing-tests.jpg](/Users/luckyrye/Desktop/esa\ jwt\ pic/pubic-post-failing-tests.jpg)
+![http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/pubic-post-failing-tests.jpg)
 
 ([code checkpoint](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/3470e918ccddb93d22e88fa2553af112d8ba27d1))
 
@@ -232,7 +232,7 @@ export default Model.extend({
 });
 ```
 
-![Model tests in testem](/Users/luckyrye/Desktop/green-model-tests.jpg)
+![Model tests in testem](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/green-model-tests.jpg)
 
 And now we can go back to filter for all...
 
@@ -254,7 +254,7 @@ We need to actually display them!
 :boom: passing tests!
 
 > show from `pauseTest();` and make note about how there is currently nothing on `http://localhost:4200`.
-> ![/Users/luckyrye/Desktop/esa jwt pic/public-post-pause-test.jpg](/Users/luckyrye/Desktop/esa jwt pic/public-post-pause-test.jpg)
+> ![http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/public-post-pause-test.jpg](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/public-post-pause-test.jpg)
 
 ([code checkpoint](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/37724c13a56ac3ed2b5c550ec3e7901855195d82))
 
@@ -360,7 +360,7 @@ test('it renders', function(assert) {
 
 And now, great!! Failing tests. Once we implement this functinality, we'll be sure to have generally the right thing showing on screen.
 
-![/Users/luckyrye/Desktop/esa jwt pic/blog-post-failing.jpg](/Users/luckyrye/Desktop/esa jwt pic/blog-post-failing.jpg)
+![http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/blog-post-failing.jpg)
 
 ```
 // app/components/blog-post/template.hbs
@@ -436,25 +436,13 @@ export default JSONAPIAdapter.extend({
 
 And now if we look at our browser, we should see a lot of posts loading from the api!
 
-![/Users/luckyrye/Desktop/esa jwt pic/cut-over-to-api.jpg](/Users/luckyrye/Desktop/esa jwt pic/cut-over-to-api.jpg)
+![http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/cut-over-to-api.jpg](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa/cut-over-to-api.jpg)
 
 This is actually quite cool. We've implemented all of this without a live API, and then we cutover to the actually API and it just works.
 
 ([checkpoint, level complete](https://github.com/ryanlabouve/ember-jwt-esa-blog/commit/37b91cfd9c3bbf990581a1fa3fa242f5d196c87d))
 
 Now that we have our API hooked up and public information flowing correctly, next up is working on Ember Simple Auth, Logging in and Out, and Private Posts! See ya next time!
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Ember Blog with JWT and Ember Simple Auth, Pt 2
@@ -730,7 +718,7 @@ test('If a user puts in the wrong login credentials, they see a login error', fu
 
 Right now our tests make a giant wall of "better luck next time". Let's just start picking from the top.
 
-![fu tests](/Users/luckyrye/Desktop/esa jwt pic/part2-fu-tests.jpg)
+![fu tests](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa-2/part2-fu-tests.jpg)
 
 #### Login Form
 
@@ -768,7 +756,7 @@ And a first pass at a very basic login form with fields that match what we alrea
 
 Cool. More red. Not a ton-o-info from the actual tests, so let's check out our console. `.logoutBtn` not found.
 
-![fu tests 2](/Users/luckyrye/Desktop/esa jwt pic/part2-2-fu-tests.jpg)
+![fu tests 2](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa-2/part2-2-fu-tests.jpg)
 
 #### Logout Form
 
@@ -984,7 +972,7 @@ export default Base.extend({
 });
 ```
 
-![user can login](/Users/luckyrye/Desktop/esa jwt pic/part2-3-fu-tests.jpg)
+![user can login](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa-2/part2-3-fu-tests.jpg)
 
 #### Logging User Out
 
@@ -1229,7 +1217,7 @@ Divs divs divs for days!
 
 From here on out it's just a bunch of small adjustments all over the place. I'm just going to link to the commit and go over a few highlights:
 
-![Final Product](/Users/luckyrye/Desktop/final-product.jpg)
+![Final Product](http://ryanlabouve.com/posts/2016-04-17-ember-blog-with-jwt-and-esa-2/final-product.jpg)
 
 * Due to the HTML / CSS structure required for some bootstrap components, I had to put classesNames on the `component.js` in several cases.
 * I changed the selectors being used in a few acceptance tests for similar reasons.
