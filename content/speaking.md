@@ -3,6 +3,12 @@ title: "Speaking"
 draft: false
 template: default.html
 ---
+
+Reacing to Change (in Ember):
+[link](https://github.com/ryanlabouve/reacting-to-change-emberjs)
+
+---
+
 I love speaking! I’ve talked about everything from Ember to [web typography](http://www.slideshare.net/ryanlabouve) and responsive web design.Here are my two most recent talks that I’ve recently given at [OKC.rb](http://www.okcruby.org/blog/2015/02/05/february-2015-meeting/) and [OKC.js](http://okcjs.com/2015/02/04/2015-02-17-lightning-talks-7/).
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/44616171" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""></iframe>
