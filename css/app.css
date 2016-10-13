@@ -120,7 +120,7 @@ html {
 }
 
 body {
-  background: var(--neutral);
+  background: color(var(--neutral) tint(85%));
   padding-bottom: var(--space-4);
   color: #333;
 }
