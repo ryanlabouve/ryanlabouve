@@ -4,7 +4,10 @@ draft: false
 template: default.html
 ---
 
-Reacing to Change (in Ember):
+Contributing to Open Source:
+[link](http://slides.com/ryanlabouve/contribute-to-open-source#/)
+
+Reacting to Change (in Ember):
 [link](https://github.com/ryanlabouve/reacting-to-change-emberjs)
 
 ---
