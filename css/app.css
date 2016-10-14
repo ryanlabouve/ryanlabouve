@@ -125,6 +125,13 @@ body {
   color: #333;
 }
 
+
+@media (min-width: 64em) {
+  p, ol, ul, dl {
+    font-size: 1.4rem;
+  }
+}
+
 h1 + ul {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
