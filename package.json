@@ -29,7 +29,7 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-swig-helpers": "git://github.com/madeofpeople/metalsmith-swig-helpers.git",
     "metalsmith-templates": "^0.7.0",
-    "postcss-nested": "^1.0.0",
+    "postcss-nested": "^4.1.2",
     "postcss-simple-vars": "^1.0.1",
     "swig": "^1.4.2"
   },
