@@ -9,7 +9,7 @@
   "author": "Ryan LaBouve",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
+    "autoprefixer": "^9.8.0",
     "browser-sync": "^2.9.3",
     "chalk": "^1.1.1",
     "gulp": "^3.9.0",
