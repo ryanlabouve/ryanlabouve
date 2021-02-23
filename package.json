@@ -17,7 +17,7 @@
     "gulp-cssnext": "^1.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^6.0.0",
+    "gulp-postcss": "^9.0.0",
     "lodash": "^3.10.1",
     "metalsmith": "^2.0.1",
     "metalsmith-collections": "^0.7.0",
