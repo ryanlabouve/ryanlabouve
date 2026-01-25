@@ -1,16 +1,23 @@
-## Hi there 👋
+  # Hey! I'm Ryan 🤠
+  
+  Security + human performance. I build tools for hard problems.
 
-<!--
-**ryanlabouve/ryanlabouve** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  ## Currently
 
-Here are some ideas to get you started:
+  - **Security** at [Alchemy](https://alchemy.com)
+  - **Products** at [Startup Ventures](https://startupventures.io)
+  - **Search & Rescue** with [OKC Metro SAR](https://okcmsar.org)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  ## Projects
+
+  | Project | What it does |
+  |---------|--------------|
+  | [PSleep](https://psleep.app) | Sleep optimization for serious recovery |
+  | [OpenWatch](https://openwatch.okcmsar.org) | Real-time SAR coordination |
+  | [MoveIt](https://moveit.live) | Movement & mobility |
+  | [High Table](https://hightable.cc) | Advisory community |
+  | [evileye](https://github.com/startupsecurity/evileye) | Scan for secrets in local photos |
+
+  ## More
+
+  → [ryanlabouve.com](https://ryanlabouve.com)
